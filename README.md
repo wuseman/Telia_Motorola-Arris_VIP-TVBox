@@ -10,13 +10,20 @@ The CPU boots from the M28W320, which contains a first-stage bootloader in the l
 
 ## Disclaimer
 
-!!! Note "This analysis stems from personal research and disassembly of the Motorola Arris STB Box from TeliaSonera AB, Sweden. The documentation in this readme is originally authored by myself, as per usual practice. Unfortunately, the decryption tool referenced from that era is no longer accurate. It's essential to note that I refrain from distributing any `decryption` tool for this purpose publicly. For those interested in further details, please don't hesitate to reach out. I've successfully developed a current decryption tool applicable to all Motorola and Arris TV Boxes, covering devices up to the year 2024."
+> [!Note]  
+> This analysis stems from personal research and disassembly of the Motorola Arris STB Box from TeliaSonera AB, Sweden. The documentation in this readme is originally authored by myself, as per usual practice. Unfortunately, the decryption tool referenced from that era is no longer accurate. It's essential to note that I refrain from distributing any `decryption` tool for this purpose publicly. For those interested in further details, please don't hesitate to reach out. I've successfully developed a current decryption tool applicable to all Motorola and Arris TV Boxes, covering devices up to the year 2024.x
 
-!!! Danger "Danger: Arris/Motorola's/Telia's decision to encrypt the second-stage bootloader raises concerns, particularly given the apparent ease of extracting the decryption key. Such a decision may raise questions about the transparency of utilizing Linux within the box, potentially prompting inquiries regarding GPL compliance. As I'm not familiar enough with exact details, I'll let this be a reminder that everyone can join in and contribute, if you have insight into whether or not this is OK or not, please let me know, I'll be happy to help. This is the reason for all this work I have done in this `README` for everyone out there"
 
-!!! Example "General Info"
 
-    ```
+    
+ Arris/Motorola's/Telia's decision to encrypt the second-stage bootloader raises concerns, particularly given the apparent ease of extracting the decryption key. Such a decision may raise questions about the transparency of utilizing Linux within the box, potentially prompting inquiries regarding GPL compliance. As I'm not familiar enough with exact details, I'll let this be a reminder that everyone can join in and contribute, if you have insight into whether or not this is OK or not, please let me know, I'll be happy to help. This is the reason for all this work I have done in this `README` for everyone out there
+
+> [!CAUTION]
+>  Arris/Motorola's/Telia's decision to encrypt the second-stage bootloader raises concerns, particularly given the apparent ease of extracting the decryption key. Such a decision may raise questions about the transparency of utilizing Linux within the box, potentially prompting inquiries regarding GPL compliance. As I'm not familiar enough with exact details, I'll let this be a reminder that everyone can join in and contribute, if you have insight into whether or not this is OK or not, please let me know, I'll be happy to help. This is the reason for all this work I have done in this `README` for everyone out there
+> 
+
+### General Info
+
     User-Agent (OLD).....................: KreaTVWebKit/531 (Motorola STB; Linux)
     User-Agent...........................: KreaTVWebKit/600 (Motorola STB; Linux; 5305)
     Default login URL....................: http://iptvlogin.telia.se/credentials
@@ -29,7 +36,7 @@ The CPU boots from the M28W320, which contains a first-stage bootloader in the l
     Telia OCSP Trust CSP Download........: https://repository.trust.teliasonera.com/CPS
     TeliaSonera root cav1.cer cert.......: http://repository.trust.teliasonera.com/teliasonerarootcav1.cer
     TeliaSonera Server cav2.cer file.....: http://repository.trust.teliasonera.com/teliasoneraservercav2.cer
-    ```
+
 
 * Download and Backup your splash theme if you want to replace the splash theme during boot
 * Kernel Version Example: kreatelVhi53_5_5_1_p4_220425_SWE_13852
@@ -146,8 +153,10 @@ Firmware
 I found the source for Arris firmware, it can be found on urls below and i created this script for find the firmwares, if you are a user from another country, you can probably find your firmware also if you change "Swe" to your country, check in the menu for the device what the name of the firmware is and you will see how to find the firmware for your country.
 ```
 
-!!! Warning: "Important Legal Advisory: In compliance with Swedish laws and regulations, I strongly recommend against undertaking the actions described here. Additionally, while exploring firmware versions through URL digit fuzzing (http://wpc.97697.teliacdn.net/<xxxxx>/ott/stbimage) may reveal more firmware files, please proceed with caution and respect for privacy laws. Using the specific user agent might help minimize visibility in logs, yet this does not negate the legal implications of unauthorized access or modification."
-
+> [!WARNING]  
+> Important Legal Advisory: In compliance with Swedish laws and regulations, I strongly recommend against undertaking the actions described here. Additionally, while exploring firmware versions through URL digit fuzzing (http://wpc.97697.teliacdn.net/<xxxxx>/ott/stbimage) may reveal more firmware files, please proceed with caution and respect for privacy laws. Using the specific user agent might help minimize visibility in logs, yet this does not negate the legal implications of unauthorized access or modification.
+>
+> 
 * There is customized firmware files country wise, I know for sure there are firmware files for 
 
 ```bash
